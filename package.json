@@ -1,0 +1,26 @@
+{
+  "name": "next_weekly_dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "serve": "node server.js",
+    "backend": "node backendServer.js"
+  },
+  "keywords": [],
+  "author": "stasE",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.16.4",
+    "isomorphic-unfetch": "3.0.0",
+    "moment": "2.24.0",
+    "mongodb": "3.1.13",
+    "next": "8.0.1",
+    "react": "16.8.2",
+    "react-dom": "16.8.2",
+    "recharts": "1.5.0"
+  }
+}
