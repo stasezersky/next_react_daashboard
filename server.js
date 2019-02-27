@@ -36,12 +36,14 @@ async function smUpdateServerData() {
   console.log('sm data updated to state')    
 }
 
-(async function(){
+async function getState(){
   await m2UpdateServerData()
   await smUpdateServerData()
   stateObj = merger(stateObj)
   stateObj['dateOfUpdate'] = moment().format('YYYY-MM-DD, h:mm a')
-}())
+}
+
+getState()
 
 
 
@@ -59,6 +61,14 @@ app.prepare()
     // app.render(req, res, actualPage, data)
     res.send(stateObj)
   })
+  server.get('/refreshState', (req, res) => {
+    // const actualPage = '/index'
+    // const data = { data: stateObj } 
+    // // console.log(data)
+    // app.render(req, res, actualPage, data)
+    getState()
+    res.send('state refreshed')
+  })
   server.get('*', (req, res) => {
     // console.log('get request')
     return handle(req, res)
@@ -73,3 +83,5 @@ app.prepare()
   console.error(ex.stack)
   process.exit(1)
 })
+
+
