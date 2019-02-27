@@ -24,13 +24,13 @@ class renderLineChart extends Component {
                 <LineChart  data={value.m2Data[this.props.selectedDomain]} >
                 {/* <LineChart width={this.state.width} height={this.state.height} data={value.m2Data[this.props.selectedDomain]}> */}
 
-                    <Line yAxisId="left" connectNulls type="monotone" dataKey="pcsAvg" stroke="#8884d8" name="M2 Avg Weekly Extracted Products" activeDot={{ r: 8 }} />
-                    <Line yAxisId="left" connectNulls type="monotone" dataKey="smAvg" name="SM Avg Weekly Extracted Products" activeDot={{ r: 8 }} />
-                    <Line yAxisId="right" connectNulls type="monotone" dataKey="esSuccessRate" name="M2 Avg Success Rate" stroke="#82ca9d" activeDot={{ r: 8 }} />
+                    <Line yAxisId="left" connectNulls type="monotone" dataKey="pcsAvg" stroke="#8884d8" name="Daily M2 Avg Extracted Products" activeDot={{ r: 8 }} />
+                    <Line yAxisId="left" connectNulls type="monotone" dataKey="smAvg" name="Daily SM Avg Extracted Products" activeDot={{ r: 8 }} />
+                    <Line yAxisId="right" connectNulls type="monotone" dataKey="esSuccessRate" name="Daily M2 Avg Success Rate" stroke="#82ca9d" activeDot={{ r: 8 }} />
                     <Legend verticalAlign="top" layout="vertical"  />
                     <CartesianGrid stroke="#ccc" />
                     <XAxis dataKey="lastDayOfWeek" />
-                    <YAxis yAxisId="left" />
+                    <YAxis width={100} yAxisId="left" />
                     <YAxis yAxisId="right" orientation="right" />
                     <Tooltip />
                 </LineChart>
