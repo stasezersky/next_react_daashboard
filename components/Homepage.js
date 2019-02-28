@@ -2,7 +2,7 @@
 import ChartWrapper from './ChartWrapper'
 
 const Homepage = () => (
-    <div className="col h-100">
+    <div className="row h-100">
 
                 <ChartWrapper />
             

@@ -5,11 +5,13 @@ import Footer from './Footer';
 class Layout extends Component {
     render() {
         return (
-            <div className="app container-fluid">
+            <div className="app">
                 <Header />
-                <section className="row mt-3 mb-3" >
+                <section className="container-fluid  mt-3 mb-3" >
                     {this.props.children}
+                    
                 </section>
+                <div className="push" ></div>
                 <Footer />
             </div>
         )

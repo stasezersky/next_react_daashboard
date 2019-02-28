@@ -1,7 +1,7 @@
 import Navbar from './Navbar';
 
 const Header = () => (
-    <div className="row">
+    <div >
         <Navbar />
     </div>
   )
