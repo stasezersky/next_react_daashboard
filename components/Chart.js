@@ -41,7 +41,7 @@ class renderLineChart extends Component {
                     <Line yAxisId="left" connectNulls type="monotone" dataKey="pcsAvg" stroke="#8884d8" name={dataKeys.m2Counts} activeDot={{ r: 8 }} />
                     <Line yAxisId="left" connectNulls type="monotone" dataKey="smAvg" name={dataKeys.smCounts} activeDot={{ r: 8 }} />
                     <Line yAxisId="right" connectNulls type="monotone" dataKey="esSuccessRate" name={dataKeys.sr} stroke="#82ca9d" activeDot={{ r: 8 }} />
-                    <Legend verticalAlign="top" layout="vertical"  />
+                    <Legend verticalAlign="top" layout="vertical" height={100} />
                     <CartesianGrid stroke="#ccc" />
                     <XAxis dataKey="lastDayOfWeek" />
                     <YAxis width={100} yAxisId="left" tickFormatter={withCommas}/>
