@@ -16,11 +16,12 @@ class Wrapper extends Component {
 
     render() {
         return (
-            <div className="col-12 h-100 justify-content-center">
+            // <div className="col-12 justify-content-center">
+            <div className="container-fluid vh-100">
                 <div className="row ">
                     <h1 class="col-12 my-4">Extraction Performance Stats</h1>
                 </div>
-                <div className="row h-100 justify-content-center">
+                <div className="row  chart-row justify-content-center">
                     <div className="col-lg-2 col-md-12 order-lg-2 mb-md-5">
                         <p>Latest update at: {this.context['dateOfUpdate']}</p>
                         <select className="custom-select" value={this.state.selectedDomain} onChange={this.handleChange}>

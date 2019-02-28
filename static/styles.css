@@ -1,12 +1,24 @@
+html, body , #__next, .app{
+  height: 100%;
+}
 section {
     width: 100%;
-    height: 565px;
+
+    /* margin-bottom: -50px; */
   }
 h1 {
   text-align: center;
 }
-footer {
-  position: fixed;
+.chart-row {
+  height: 80%;
+  overflow: scroll;
+}
+.footer,
+.push {
+  height: 50px;
+}
+/* footer {
+  position: sticky;
   bottom: 0;
   width: 100%;
-}
+} */

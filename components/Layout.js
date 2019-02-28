@@ -7,11 +7,11 @@ class Layout extends Component {
         return (
             <div className="app">
                 <Header />
-                <section className="container-fluid  mt-3 mb-3" >
+
                     {this.props.children}
-                    
-                </section>
-                <div className="push" ></div>
+
+
+
                 <Footer />
             </div>
         )
