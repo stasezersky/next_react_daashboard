@@ -16,7 +16,6 @@ class Wrapper extends Component {
 
     render() {
         return (
-            // <div className="col-12 justify-content-center">
             <div className="container-fluid vh-100">
                 <div className="row ">
                     <h1 class="col-12 my-4">Extraction Performance Stats</h1>

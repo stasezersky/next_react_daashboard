@@ -5,15 +5,23 @@ import Footer from './Footer';
 class Layout extends Component {
     render() {
         return (
-            <div className="app">
-                <Header />
+            <div>
+                <div className="app" >
+                    <Header />
 
                     {this.props.children}
 
 
 
-                <Footer />
+                    <Footer />
+                </div>
+                <style jsx>{`
+                    .app {
+                        background-image: url('/static/loginbg.png')
+                    }
+                        `}</style>
             </div>
+
         )
     }
 }
