@@ -61,14 +61,6 @@ const handle = app.getRequestHandler()
 app.prepare()
   .then(() => {
     const server = express()
-    // server.get('/api/hash', (req, res) => {
-    //   // const actualPage = '/index'
-    //   // const data = { data: stateObj } 
-    //   // // console.log(data)
-    //   // app.render(req, res, actualPage, data)
-    //   res.send(hashPassword)
-    // })
-    // ###########################################################################
     server.use( bodyParser.json() )
     server.use(bodyParser.urlencoded({     // to support URL-encoded bodies
       extended: true
@@ -79,13 +71,6 @@ app.prepare()
       saveUninitialized: false
     }));
     server.route('/login')
-      // .get((req, res, next) => {
-      //   if (req.session.user = 'genericUser') {
-      //     res.redirect('/')
-      //   } else{
-      //     next()
-      //   }
-      // })
       .post((req, res) => {
         if (req.session.user === 'genericUser') {
           res.redirect('/')
@@ -113,23 +98,13 @@ app.prepare()
 
 
     server.get('/api/getState', (req, res) => {
-      // const actualPage = '/index'
-      // const data = { data: stateObj } 
-      // // console.log(data)
-      // app.render(req, res, actualPage, data)
       res.send(stateObj)
     })
     server.get('/refreshState', (req, res) => {
-      // const actualPage = '/index'
-      // const data = { data: stateObj } 
-      // // console.log(data)
-      // app.render(req, res, actualPage, data)
       getState()
       res.send('state refreshed')
     })
     server.get('*', (req, res) => {
-      // if(req.session && req.session.user == 'genericUser')
-      // console.log('get request')
       return handle(req, res)
     })
 
