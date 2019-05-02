@@ -10,4 +10,6 @@ you are good to go - the dashboard is served on localhost:3000
 
 passowrd is 123
 
-code in `lib/m2ServerSrc` and lib `lib/smServerSrc` been imported from other service I created
+don't expect to see any data because it is proprietary in resides on local mongo
+
+code in `lib/m2ServerSrc` and lib `lib/smServerSrc` been imported from other service I created and have the ability to generate xlsx files
