@@ -4,7 +4,7 @@ const timeHelper = require('./lib/m2ServerSrc/timeHelper')
 const moment = require('moment');
 const m2Transformer = require('./lib/m2ServerSrc/m2DataTrasnformer')
 const smTransformer = require('./lib/smServerSrc/helpers/smDataTransformer')
-const merger = require('./lib/lib/merger').merger
+const merger = require('./lib/merger').merger
 
 const express = require('express')
 const port = 5000
