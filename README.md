@@ -1,4 +1,4 @@
-# weekly_stats_dashboa
+# weekly_stats_dashboard
 
 run `npm instal --save`
 
